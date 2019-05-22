@@ -122,7 +122,6 @@ var tree = binarySearchTree(value : 50)
 for i in 40...60{
     tree.insert(value : i)
 }
-
 print(tree.printTree())
 print("Tree height \t\(tree.height())")
 

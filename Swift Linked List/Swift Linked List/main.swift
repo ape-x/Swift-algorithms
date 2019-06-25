@@ -19,12 +19,12 @@ class list{
     }
     
     func printList(){
-        printList(uno: &self.head)
+        printList(starting_at: &self.head)
     }
-    private func printList(uno : inout node){
-        print(uno.value)
+    private func printList(starting_at : inout node){
+        print(starting_at.value)
         if uno.next != nil {
-            return printList(uno : &uno.next!)
+            return printList(uno : &starting_at.next!)
         }
         
     }

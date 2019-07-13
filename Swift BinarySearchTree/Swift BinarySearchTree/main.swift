@@ -20,7 +20,7 @@ class binarySearchTree{
     }
     private func insert(value : Int, parent : binarySearchTree){
         if value < self.value{
-            if left!=nil{
+            if let left = left{
                 left.insert(value: value, parent : self)
             }else{
                 left = binarySearchTree(value : value)
@@ -28,7 +28,7 @@ class binarySearchTree{
             }
         }
         if value > self.value{
-            if right!=nil{
+            if let right = right{
                 right.insert(value : value , parent : self)
             }else{
                 right = binarySearchTree(value : value)
@@ -70,7 +70,7 @@ class binarySearchTree{
             return true
         }
         if value < self.value{
-            if left!=nil{
+            if let left = left{
                 if left.searchFor(value : value){
                     return true
                 }else{
@@ -81,7 +81,7 @@ class binarySearchTree{
             }
         }
         if value > self.value{
-            if right!=nil{
+            if let right=right{
                 if right.searchFor(value : value){
                     return true
                 }else{

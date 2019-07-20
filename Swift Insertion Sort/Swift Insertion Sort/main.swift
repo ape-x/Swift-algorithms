@@ -8,10 +8,14 @@ for _ in 0...100{
 }
 
 func insertionSort(unsorted_array array : inout[Int]){
-    var iteratii = 0
+    
+    guard array.count > 0 else{
+        return
+    }
+    
     for i in 1...array.count-1{
         for j in (1...i).reversed(){
-            iteratii+=1
+
             if array[j-1]>array[j]{
                 array.swapAt(j, j-1)
             }else{
@@ -22,7 +26,6 @@ func insertionSort(unsorted_array array : inout[Int]){
     for i in array{
         print(i)
     }
-    print("\niteratii\t\(iteratii)")
 }
 
 insertionSort(unsorted_array: &array)
